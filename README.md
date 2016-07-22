@@ -7,11 +7,11 @@ YDItemStat - информация о файлах
 
 ##Протестированные функции
 
-#Аутентификация пользователя и авторизация приложения
+###Аутентификация пользователя и авторизация приложения
 
 За это отвечает YOAuth2Delegate, ViewController для ввода учетных данных из коробки.
 
-#Создание директории
+###Создание директории
 
 ```
 [self.session createDirectoryAtPath:@"/TestYaSDK" completion:^(NSError *err) {
@@ -19,7 +19,7 @@ YDItemStat - информация о файлах
 }];
 ```
 
-#Получение содержимого директории
+###Получение содержимого директории
 
 ```
 [self.session fetchDirectoryContentsAtPath:self.path completion:^(NSError *err, NSArray *list) {
@@ -35,7 +35,7 @@ YDItemStat - информация о файлах
 }];
 ```
 
-#Получение информации о файле
+###Получение информации о файле
 
 Эа это отвечает 
 ```
@@ -55,7 +55,7 @@ YDItemStat - информация о файлах
 @property (nonatomic, assign, readonly) BOOL isReadOnly;
 ```
 
-#Скачивание файла
+###Скачивание файла
 
 Асинхронное скачивание файла, можно отлеживать процесс скачивания.
 
@@ -75,7 +75,7 @@ NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"Доб
 }];
 ```
 
-#Загрузка файла на Яндекс.Диск
+###Загрузка файла на Яндекс.Диск
 
 Асинхронная загрузка файла, можно отлеживать процесс загрузки.
 
@@ -105,7 +105,7 @@ if (image != nil) {
 }
 ```
 
-#Удаление файлов
+###Удаление файлов
 
 ```
 for (YDItemStat *item in self.files) {
@@ -121,7 +121,7 @@ for (YDItemStat *item in self.files) {
 }
 ```
 
-#Создание публичной ссылки на файл
+###Создание публичной ссылки на файл
 
 ```
 for (YDItemStat *item in self.files) {
@@ -138,7 +138,7 @@ for (YDItemStat *item in self.files) {
 }
 ```
 
-#Отмена создания публичной ссылки на файл
+###Отмена создания публичной ссылки на файл
 
 ```
 for (YDItemStat *item in self.files) {
